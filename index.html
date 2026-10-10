@@ -1,40 +1,31 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
     <title>Кулинар и фуд-блогер</title>
-
-    <style>
-        h2 {
-            font-size: 1.8rem;
-            line-height: 1.4;
-            margin-bottom: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
     <header>
-            <img
-            src="images/avatar.png"
-            alt="Аватар владельца страницы"
-            width="120"
-            height="120"
-            style="object-fit: cover;">
-            <div>
-                <h1>Постовалов</h1>
-                <p>Кулинар и фуд-блогер</p>
-            </div>
-        </header>
+        <img src="images/avatar.png" alt="Аватар владельца страницы — Постовалов">
+        <h1>Постовалов</h1>
+        <p>Кулинар и фуд-блогер</p>
+        
+        <nav class="nav-menu">
+            <a href="#skills">Навыки</a>
+            <a href="#dishes">Фирменные блюда</a>
+            <a href="#ingredients">Ингредиенты</a>
+            <a href="#feedback">Обратная связь</a>
+        </nav>
+    </header>
 
     <main>
         <div class="content">
-            <div class="section">
-                <section class="skills">
+            <div class="main-column">
+                
+                <section id="skills">
                     <h2>Навыки</h2>
                     <ul>
                         <li>Приготовление блюд азиатской кухни</li>
@@ -43,62 +34,110 @@
                     </ul>
                 </section>
 
-                <section class="projects">
-                    <h2>Блюда</h2>
-                    <div class="project-card">
-                        <div class="project-card-content">
-                            <h3>Рецепт Рамена</h3>
-                            <p>Классический японский суп с лапшой и бульоном</p>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-card-content">
-                            <h3>Кимчи Мастер-класс</h3>
-                            <p>Пошаговый рецепт корейского маринованного овоща</p>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-card-content">
-                            <h3>Том-ям для начинающих</h3>
-                            <p>Острый тайский суп с морепродуктами и специями</p>
-                        </div>
+                <section id="dishes">
+                    <h2>Фирменные блюда</h2>
+                    <div class="dishes-flex-container">
+                        
+                        <article class="dish-card">
+                            <div class="dish-image-placeholder">🍜</div>
+                            <div class="dish-card-content">
+                                <h3>Рецепт Рамена</h3>
+                                <p>Классический японский суп с лапшой и бульоном.</p>
+                                <dl class="dish-meta">
+                                    <dt>Время / ккал:</dt>
+                                    <dd>45 мин / 520 ккал</dd>
+                                </dl>
+                            </div>
+                        </article>
+
+                        <article class="dish-card">
+                            <div class="dish-image-placeholder">🥬</div>
+                            <div class="dish-card-content">
+                                <h3>Кимчи Мастер-класс</h3>
+                                <p>Пошаговый рецепт корейского маринованного овоща.</p>
+                                <dl class="dish-meta">
+                                    <dt>Время / ккал:</dt>
+                                    <dd>120 мин / 150 ккал</dd>
+                                </dl>
+                            </div>
+                        </article>
+
+                        <article class="dish-card">
+                            <div class="dish-image-placeholder">🍤</div>
+                            <div class="dish-card-content">
+                                <h3>Том-ям для начинающих</h3>
+                                <p>Острый тайский суп с морепродуктами и специями.</p>
+                                <dl class="dish-meta">
+                                    <dt>Время / ккал:</dt>
+                                    <dd>35 мин / 380 ккал</dd>
+                                </dl>
+                            </div>
+                        </article>
+
                     </div>
                 </section>
+
+                <section id="ingredients">
+                    <h2>Ингредиенты недели</h2>
+                    <div class="ingredients-grid-container">
+                        
+                        <div class="ingredient-item">
+                            <div class="ing-emoji">🥢</div>
+                            <h4>Лапша</h4>
+                            <p>Основа сытных азиатских супов.</p>
+                        </div>
+                        <div class="ingredient-item">
+                            <div class="ing-emoji">🥚</div>
+                            <h4>Яйца</h4>
+                            <p>Источник белка и нежной текстуры.</p>
+                        </div>
+                        <div class="ingredient-item">
+                            <div class="ing-emoji">🥩</div>
+                            <h4>Мясо</h4>
+                            <p>Насыщенный бульон и питательность.</p>
+                        </div>
+                        <div class="ingredient-item">
+                            <div class="ing-emoji">🌿</div>
+                            <h4>Зелень</h4>
+                            <p>Свежесть и баланс вкуса в блюде.</p>
+                        </div>
+                        <div class="ingredient-item">
+                            <div class="ing-emoji">🧄</div>
+                            <h4>Чеснок</h4>
+                            <p>Яркий аромат и пикантная острота.</p>
+                        </div>
+                        <div class="ingredient-item">
+                            <div class="ing-emoji">🌶️</div>
+                            <h4>Перец</h4>
+                            <p>Острота для истинных ценителей.</p>
+                        </div>
+
+                    </div>
+                </section>
+
             </div>
 
-            <aside>
-                <h2>Любимые ингридиенты</h2>
-                <p><a href="https://github.com/Terrka/932403.postovalov.anton.lab1/tree/lab2" target="_blank">Лапша</a></p>
-                <p>Яйца</p>
-                <p>Мясо</p>
-                <p>Зелень</p>
-            </aside>
-        </div>
-
-        <div class="form">
-            <section>
+            <aside id="feedback">
                 <h2>Обратная связь</h2>
-                <form>
+                <form action="#">
                     <label for="name">Имя:</label>
-                    <input type="text" id="name" name="name" placeholder="Введите ваше Имя" required>
-
+                    <input type="text" id="name" required>
+                    
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Введите ваш Email" required>
-
+                    <input type="email" id="email" required>
+                    
                     <label for="message">Сообщение:</label>
-                    <textarea id="message" rows="5" name="message" placeholder="Введите ваше сообщение"
-                        required></textarea>
-
+                    <textarea id="message" rows="4" required></textarea>
+                    
                     <button type="submit">Отправить</button>
                 </form>
-            </section>
+            </aside>
         </div>
-
     </main>
 
     <footer>
         <p>&copy; 2026 Постовалов</p>
     </footer>
-</body>
 
+</body>
 </html>
