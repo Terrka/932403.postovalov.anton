@@ -7,7 +7,7 @@
     --color-text-light: #fffaf5;
     --color-text-dark: #4a2c20;
     --color-text-accent: #c47a5a;
-    --color-focus: #e2b111;
+    --color-focus: #b58900; 
 
     --font-primary: 'Georgia', serif;
     --font-secondary: Arial, Helvetica, sans-serif;
@@ -21,19 +21,19 @@ body {
 }
 
 header {
-    position: relative;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
     padding: 15px;
     background-color: var(--color-header);
     color: var(--color-text-light);
+    text-align: center;
+    
+    position: static; 
 }
 
 header img {
-    position: absolute;
-    left: calc(50% - 230px);
-    top: 50%;
-    transform: translateY(-50%);
-
     width: 100px;
     height: 100px;
     object-fit: cover;
@@ -54,7 +54,6 @@ main h2 {
 
 section {
     background-color: var(--color-blocks);
-    gap: 30px;
     padding: 10px;
     padding-right: 30px;
     margin-bottom: 20px;
@@ -74,12 +73,22 @@ aside {
     border-radius: 20px;
 }
 
-aside a{
+aside a {
     color: var(--color-header-darker);
     font-weight: bold;
+    transition: color 0.2s ease;
 }
 
-aside a:hover{
+aside a:hover {
+    color: var(--color-text-accent);
+}
+
+aside a:focus {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+aside a:active {
     color: var(--color-text-accent);
 }
 
@@ -109,7 +118,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-    outline: 2px inset var(--color-focus);
+    outline: 2px solid var(--color-focus);
     outline-offset: 1px;
 }
 
@@ -133,24 +142,23 @@ button:hover {
     transform: translateY(-1px);
 }
 
+button:focus {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
 button:active {
     transform: translateY(0);
 }
 
 footer {
     background-color: var(--color-text-dark);
-    color: --color-text-light;
+    color: var(--color-text-light); 
     padding: 15px;
     text-align: center;
 }
 
 .content {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-}
-
-.form {
     display: flex;
     gap: 20px;
     align-items: flex-start;
@@ -165,11 +173,13 @@ footer {
 
 .project-card {
     position: relative;
-    background-color: var(--color-blocks) - rgba(0, 0, 0, 0.5);
+    background-color: var(--color-blocks); 
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    
+    isolation: isolate; 
 }
 
 .project-card:hover {
@@ -186,8 +196,8 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.1);
-    filter: blur(50%);
+    background-color: rgba(74, 44, 32, 0.15); 
+    filter: blur(6px); 
     opacity: 0;
     z-index: -1;
     transition: opacity 0.3s ease;
