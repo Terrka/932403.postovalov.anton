@@ -263,6 +263,108 @@ footer {
     text-align: center;
 }
 
+body.dark-theme {
+    --color-header: #5a3020;
+    --color-header-darker: #3b1f14;
+    --color-background: #1e1612;
+    --color-blocks: #2a201a;
+    --color-block-additional: #3a2c24;
+    --color-text-light: #f5eadb;
+    --color-text-dark: #ead9c6;
+    --color-text-accent: #e0956f;
+}
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-theme input,
+body.dark-theme textarea {
+    color: var(--color-text-dark);
+    background-color: var(--color-blocks);
+    border-color: var(--color-block-additional);
+}
+
+.control-btn {
+    width: auto;
+}
+
+.recipe-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.recipes-status {
+    margin: 0 0 15px 0;
+    min-height: 1em;
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    color: var(--color-text-accent);
+}
+
+.recipes-status.error {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+.recipes-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.recipe-card {
+    background-color: var(--color-background);
+    border: 1px solid var(--color-block-additional);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    color: var(--color-text-dark);
+}
+
+.recipe-card h3 {
+    margin: 0 0 10px 0;
+    color: var(--color-header-darker);
+}
+
+body.dark-theme main h2,
+body.dark-theme .dish-card h3,
+body.dark-theme .recipe-card h3,
+body.dark-theme .ingredient-item h4,
+body.dark-theme .dish-meta dt,
+body.dark-theme aside h2,
+body.dark-theme aside a {
+    color: var(--color-text-accent);
+}
+
+body.dark-theme aside a:hover {
+    color: var(--color-text-light);
+}
+
+body.dark-theme footer {
+    background-color: #120d0a;
+    color: var(--color-text-light);
+}
+
+body.dark-theme .recipes-status.error {
+    color: #ff8a7a;
+}
+
+.recipe-card ul {
+    margin: 0 0 15px 0;
+    padding-left: 20px;
+}
+
+.recipe-card.highlight {
+    border-color: var(--color-focus);
+}
+
+.hidden {
+    display: none;
+}
+
 @media (max-width: 850px) {
     .content {
         flex-direction: column;
