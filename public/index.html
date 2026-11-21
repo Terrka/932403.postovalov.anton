@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Кулинар и фуд-блогер</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#8b4a32">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/icons/icon-192.png">
+    <link rel="apple-touch-icon" href="/icons/icon-192.png">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
@@ -18,7 +22,9 @@
             <a href="#dishes">Фирменные блюда</a>
             <a href="#ingredients">Ингредиенты</a>
             <a href="#my-recipes">Мои рецепты</a>
+            <a href="#tasks">Список задач</a>
             <a href="#feedback">Обратная связь</a>
+            <a href="/about">О себе</a>
         </nav>
         <button id="theme-toggle" class="control-btn" type="button">🌙 Тёмная тема</button>
     </header>
@@ -130,6 +136,21 @@
                     </div>
                 </section>
 
+                <section id="tasks">
+                    <h2>Список задач</h2>
+                    <form id="task-form" class="task-form">
+                        <label for="task-title" class="visually-hidden">Название задачи</label>
+                        <input type="text" id="task-title" placeholder="Новая задача" autocomplete="off">
+                        <button type="submit" class="control-btn">Добавить</button>
+                    </form>
+                    <label class="task-filter">
+                        <input type="checkbox" id="task-filter">
+                        Только завершённые
+                    </label>
+                    <p id="tasks-status" class="recipes-status" role="status"></p>
+                    <ul id="tasks-list" class="tasks-list"></ul>
+                </section>
+
             </div>
 
             <aside id="feedback">
@@ -154,7 +175,6 @@
         <p>&copy; 2026 Постовалов</p>
     </footer>
 
-
-    <script src="script.js"></script>
+    <script src="/reg-sw.js"></script>
 </body>
 </html>
